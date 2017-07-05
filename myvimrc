@@ -1,0 +1,41 @@
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'taglist.vim'
+Plugin 'winmanager'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Shougo/neocomplete'
+
+Plugin 'molokai'
+Plugin 'vim-airline/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'easygrep'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+source /etc/vimrc
+set guifont=Courier\ 10\ Pitch\ 18
+set number
+syntax on
+set ts=4
+set expandtab
+"colorscheme murphy
+colorscheme industry
+
+
+set showcmd
+let g:winManagerWindowLayout='netrw,taglist'
+nmap wm :WMToggle<cr>
